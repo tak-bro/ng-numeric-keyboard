@@ -1,4 +1,3 @@
-/* tslint:disable */
 import {
     Component, EventEmitter, Input, Output, OnInit,
     OnDestroy, AfterViewInit, AfterViewChecked, ElementRef, ApplicationRef,
@@ -8,9 +7,8 @@ import { NG_VALUE_ACCESSOR, ControlValueAccessor } from '@angular/forms';
 
 import { NumericKeyboardComponent } from '../keyboard/keyboard.component';
 
-import { coerceBooleanProperty } from '../utils/utils';
 import * as Keys from '../utils/keys';
-import { animate } from '../utils/animate';
+import { coerceBooleanProperty, animate } from '../utils/utils';
 
 const RNumber = /^\d*(?:\.\d*)?$/;
 const RTel = /^\d*$/;
@@ -238,7 +236,6 @@ export class NumericInputComponent implements OnInit, OnDestroy, AfterViewInit, 
 
     onMounted(el) {
         this.set('inputElement', el);
-        this.set('cursorColor', this.activeColor);
 
         if (this.kp.autofocus && !this.kp.readonly && !this.kp.disabled) {
             setTimeout(() => this.openKeyboard(), 500);
