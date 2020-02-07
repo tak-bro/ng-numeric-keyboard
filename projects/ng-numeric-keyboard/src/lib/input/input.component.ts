@@ -5,6 +5,7 @@ import {
     ComponentFactoryResolver, Injector, EmbeddedViewRef, forwardRef
 } from '@angular/core';
 import { NG_VALUE_ACCESSOR, ControlValueAccessor } from '@angular/forms';
+
 import { NumericKeyboardComponent } from '../keyboard/keyboard.component';
 
 import { coerceBooleanProperty } from '../utils/utils';
@@ -48,11 +49,11 @@ const Options = {
     placeholder: '',
     format: '^',
     layout: 'number',
-    entertext: '다음'
+    entertext: 'Enter'
 };
 
 @Component({
-    selector: 'lemon-numeric-input',
+    selector: 'ng-numeric-input',
     templateUrl: './input.component.html',
     styleUrls: ['./input.component.scss'],
     providers: [
@@ -64,15 +65,12 @@ const Options = {
     ]
 })
 export class NumericInputComponent implements OnInit, OnDestroy, AfterViewInit, AfterViewChecked, ControlValueAccessor {
+
     private _autofocus: boolean = Options.autofocus;
     private _disabled: boolean = Options.disabled;
     private _readonly: boolean = Options.readonly;
     private _value: number | string = Options.value;
 
-    _onChange = (_: any) => {};
-
-    @Input() activeColor = '#F68021';
-    @Input() bgColor = '#FAFAFA';
     public isFocus = false;
 
     @Input()
@@ -115,6 +113,7 @@ export class NumericInputComponent implements OnInit, OnDestroy, AfterViewInit, 
 
     public kp: any;
     public ks: any;
+    _onChange = (_: any) => {};
 
     constructor(
         private element: ElementRef,

@@ -1,22 +1,21 @@
-/* tslint:disable */
 import { Component, EventEmitter, Input, Output, OnInit } from '@angular/core';
 import { ENTER, DEL, ESC } from '../utils/keys';
 import Layouts from '../utils/layouts';
 
-const Options = {
+const KeyboardOptions = {
     layout: 'number',
-    entertext: '다음'
+    entertext: 'Enter'
 };
 
 @Component({
-    selector: 'lemon-numeric-keyboard',
+    selector: 'ng-numeric-keyboard',
     templateUrl: './keyboard.component.html',
     styleUrls: ['./keyboard.component.scss']
 })
 export class NumericKeyboardComponent implements OnInit {
 
-    @Input() layout: string | { key: number | string }[][] = Options.layout;
-    @Input() entertext: string = Options.entertext;
+    @Input() layout: string | { key: number | string }[][] = KeyboardOptions.layout;
+    @Input() entertext: string = KeyboardOptions.entertext;
 
     @Output() press = new EventEmitter<number | string>();
     @Output() enterpress = new EventEmitter();
@@ -68,9 +67,5 @@ export class NumericKeyboardComponent implements OnInit {
 
         this.kp = options;
         this.ks = { resolvedLayout };
-    }
-
-    private set(key: any, value: any) {
-        this.ks[key] = value;
     }
 }
