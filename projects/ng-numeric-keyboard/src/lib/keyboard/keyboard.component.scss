@@ -1,0 +1,32 @@
+@import '../styles/keyboard';
+
+:host {
+    width: 100%;
+    height: 100%;
+
+    .numeric-keyboard {
+        width: inherit;
+        height: inherit;
+    }
+
+    .del-icon {
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: center;
+        background-image: url('delete.svg');
+        width: 100%;
+        height: 100%;
+        margin-left: -1px;
+    }
+
+    .down-icon {
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: center;
+        background-image: url('arrow-down.svg');
+        width: 70%;
+        height: 70%;
+        margin: auto;
+    }
+
+}
