@@ -22,4 +22,4 @@ import { NumericKeyboardComponent } from './keyboard/keyboard.component';
         FormsModule
     ]
 })
-export class NumericKeyboardModule { }
+export class NumericInputModule { }

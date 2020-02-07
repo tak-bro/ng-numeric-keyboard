@@ -7,7 +7,14 @@
         "build": "ng build",
         "test": "ng test",
         "lint": "ng lint",
-        "e2e": "ng e2e"
+        "e2e": "ng e2e",
+        "test:headless": "ng test ng-numeric-keyboard --watch=false --browsers=ChromeHeadless",
+        "test:ng-numeric-keyboard": "ng test ng-numeric-keyboard",
+        "prepublish": "ng build --project=ng-numeric-keyboard",
+        "publish": "cd dist/ng-numeric-keyboard && npm publish",
+        "pack:ng-numeric-keyboard": "cd dist/ng-numeric-keyboard && npm pack",
+        "package": "ng build ng-numeric-keyboard && npm run pack:ng-numeric-keyboard",
+        "build:dev": "ng build --project=ng-numeric-keyboard --watch"
     },
     "private": true,
     "dependencies": {

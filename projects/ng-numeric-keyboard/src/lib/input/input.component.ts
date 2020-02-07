@@ -121,7 +121,7 @@ export class NumericInputComponent implements OnInit, OnDestroy, AfterViewInit, 
     }
 
     ngOnInit() {
-        let resolvedOptions = {};
+        const resolvedOptions = {};
         for (let key in Options) {
             resolvedOptions[key] = this[key];
         }
@@ -178,7 +178,7 @@ export class NumericInputComponent implements OnInit, OnDestroy, AfterViewInit, 
                 break;
             case 'input':
                 this.ngModelChange.emit(payload);
-                break
+                break;
         }
     }
 
@@ -356,6 +356,7 @@ export class NumericInputComponent implements OnInit, OnDestroy, AfterViewInit, 
         animate((timestamp, frame, frames) => {
             elKeyboard.style.position = 'fixed';
             elKeyboard.style.bottom = '0';
+            elKeyboard.style.left = '0';
             elKeyboard.style.transform = `translateY(${(frames - frame) / frames * 100}%)`;
         }, () => {}, 10);
 

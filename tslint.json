@@ -75,6 +75,7 @@
         "template-no-negated-async": true,
         "use-lifecycle-interface": true,
         "use-pipe-transform-interface": true,
-        "variable-name": false
+        "variable-name": false,
+        "forin": false
     }
 }
