@@ -17,7 +17,15 @@
     "lib": [
       "es2018",
       "dom"
-    ]
+    ],
+    "paths": {
+      "ng-numeric-keyboard": [
+        "dist/ng-numeric-keyboard"
+      ],
+      "ng-numeric-keyboard/*": [
+        "dist/ng-numeric-keyboard/*"
+      ]
+    }
   },
   "angularCompilerOptions": {
     "fullTemplateTypeCheck": true,
