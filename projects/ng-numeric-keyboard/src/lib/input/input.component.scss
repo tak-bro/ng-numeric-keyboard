@@ -3,8 +3,6 @@
     display: -ms-flexbox;
     display: flex;
     text-align: left;
-    padding: 16px;
-    border-radius: 10px;
 
     .numeric-input {
         display: block;
@@ -35,14 +33,14 @@
         width: 10000%;
 
         .input-text {
-            letter-spacing: -1.5px;
+            letter-spacing: -1.8px;
         }
     }
 
     .numeric-input-cursor {
         pointer-events: none;
         position: absolute;
-        left: 0;
+        left: 1px;
         top: 1px;
         width: 1px;
         height: 90%;
