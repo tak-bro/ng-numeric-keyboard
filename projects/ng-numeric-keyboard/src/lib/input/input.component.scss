@@ -1,3 +1,5 @@
+/* prefixed by https://autoprefixer.github.io (PostCSS: v7.0.26, autoprefixer: v9.7.3) */
+
 .numeric-input-container {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -44,6 +46,7 @@
         top: 1px;
         width: 1px;
         height: 90%;
+        -webkit-animation: numeric-input-cursor 1s steps(1) infinite;
         animation: numeric-input-cursor 1s steps(1) infinite;
     }
 
@@ -66,25 +69,16 @@
                 right: 0;
                 bottom: 0;
                 left: 0;
+                -webkit-transform: translateY(100%);
+                -ms-transform: translateY(100%);
                 transform: translateY(100%);
+                -webkit-box-shadow: 0 -2px 4px 0 #cfd4da;
                 box-shadow: 0 -2px 4px 0 #cfd4da;
             }
         }
     }
 
-    @-moz-keyframes numeric-input-cursor {
-        50% {
-            background-color: transparent;
-        }
-    }
-
     @-webkit-keyframes numeric-input-cursor {
-        50% {
-            background-color: transparent;
-        }
-    }
-
-    @-o-keyframes numeric-input-cursor {
         50% {
             background-color: transparent;
         }

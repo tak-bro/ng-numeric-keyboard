@@ -1,3 +1,5 @@
+/* prefixed by https://autoprefixer.github.io (PostCSS: v7.0.26, autoprefixer: v9.7.3) */
+
 @font-face {
     font-family: numeric-keyboard;
     src: url('./assets/SpoqaHanSansRegular.woff') format("woff");
@@ -41,7 +43,10 @@
 }
 
 .numeric-keyboard-key {
+    -ms-touch-action: manipulation;
     touch-action: manipulation;
+    -webkit-transition: background 0.3s;
+    -o-transition: background 0.3s;
     transition: background 0.3s;
     color: #3B3B3B;
     background: #FAFAFA;
@@ -91,4 +96,3 @@
     display: block;
     content: ' ';
 }
-
