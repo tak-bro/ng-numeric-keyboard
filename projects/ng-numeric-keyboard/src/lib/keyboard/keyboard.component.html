@@ -8,7 +8,7 @@
             class="numeric-keyboard-key"
             (touchend)="onTouchend(c.key)"
         >
-            <div *ngIf="c.key === DEL" class="del-icon">&nbsp;</div>
+            <div *ngIf="c.key === DEL" class="del-icon" [ngClass]="c.rowspan === 2 ? 'half' : ''">&nbsp;</div>
             <div *ngIf="c.key === ESC" class="down-icon">&nbsp;</div>
         </td>
     </tr>

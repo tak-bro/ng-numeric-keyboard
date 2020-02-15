@@ -69,22 +69,23 @@ export class NumericInputComponent implements OnInit, OnDestroy, AfterViewInit, 
     private _readonly: boolean = Options.readonly;
     private _value: number | string = Options.value;
 
+    @Input() activeColor = '#3B3B3B';
     public isFocus = false;
 
     @Input()
-    get autofocus() { return this._autofocus }
-    set autofocus(value: any) { this._autofocus = coerceBooleanProperty(value) }
+    get autofocus() { return this._autofocus; }
+    set autofocus(value: any) { this._autofocus = coerceBooleanProperty(value); }
 
     @Input()
-    get disabled() { return this._disabled }
-    set disabled(value: any) { this._disabled = coerceBooleanProperty(value) }
+    get disabled() { return this._disabled; }
+    set disabled(value: any) { this._disabled = coerceBooleanProperty(value); }
 
     @Input()
-    get readonly() { return this._readonly }
-    set readonly(value: any) { this._readonly = coerceBooleanProperty(value) }
+    get readonly() { return this._readonly; }
+    set readonly(value: any) { this._readonly = coerceBooleanProperty(value); }
 
     @Input()
-    get ngModel() { return this._value }
+    get ngModel() { return this._value; }
     set ngModel(value: any) {
         if (this.ks && this.ks.value !== value) {
             const rawValue = value.toString().split('');
@@ -122,7 +123,7 @@ export class NumericInputComponent implements OnInit, OnDestroy, AfterViewInit, 
 
     ngOnInit() {
         const resolvedOptions = {};
-        for (let key in Options) {
+        for (const key in Options) {
             resolvedOptions[key] = this[key];
         }
         this.init(resolvedOptions);
@@ -236,6 +237,7 @@ export class NumericInputComponent implements OnInit, OnDestroy, AfterViewInit, 
 
     onMounted(el) {
         this.set('inputElement', el);
+        this.set('cursorColor', this.activeColor);
 
         if (this.kp.autofocus && !this.kp.readonly && !this.kp.disabled) {
             setTimeout(() => this.openKeyboard(), 500);
@@ -250,11 +252,11 @@ export class NumericInputComponent implements OnInit, OnDestroy, AfterViewInit, 
         const { type, maxlength } = this.kp;
         const { rawValue, cursorPos, formatFn } = this.ks;
 
-        const input = (key: any) => {
-            const isAdd = typeof key !== 'undefined';
+        const input = (inputKey: any) => {
+            const isAdd = typeof inputKey !== 'undefined';
             const newRawValue = rawValue.slice();
             if (isAdd) {
-                newRawValue.splice(cursorPos, 0, key);
+                newRawValue.splice(cursorPos, 0, inputKey);
             } else {
                 newRawValue.splice(cursorPos - 1, 1);
             }
