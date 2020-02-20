@@ -1,27 +1,73 @@
-# NgNumericKeyboardApp
+# ng-numeric-keyboard
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.22.
+Number keyboard for mobile browsers For Angular
 
-## Development server
+> This project was forked in [numeric-keyboard](https://github.com/viclm/numeric-keyboard)
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+## Demo
 
-## Code scaffolding
+- TBD
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## Usage
 
-## Build
+### 1. Install
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+```
+npm install ng-numeric-keyboard --save
+```
 
-## Running unit tests
+import `NgNumericKeyboardModule`。
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+```typescript
+import { NgNumericKeyboardModule } from 'ng-numeric-keyboard';
 
-## Running end-to-end tests
+@NgModule({
+  imports: [ BrowserModule, NgNumericKeyboardModule ],
+  declarations: [AppComponent],
+  bootstrap: [AppComponent]
+})
+export class AppModule { }
+```
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+### 2. Template
 
-## Further help
+```html
+<ng-numeric-input [layout]="'number'"
+                  [entertext]="'Next'"
+                  [placeholder]="'This is placeholder'"
+                  [disabled]="false"
+                  [(ngModel)]="data"
+                  (enterpress)="onEnter()"
+                  (ngModelChange)="onChange()"
+                  (focus)="onInputFocus()"
+                  (blur)="onInputBlur()">
+</ng-numeric-input>
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+```
+
+**Method**
+
+| Name              | Description                                                                                    |
+|-------------------|------------------------------------------------------------------------------------------------|
+| `enterpress()`    | TBD
+| `ngModelChange()` | TBD
+| `focus()`         | TBD
+| `blur()`          | TBD
+
+
+## API
+
+- TBD
+
+## Troubleshooting
+
+Please follow this guidelines when reporting bugs and feature requests:
+
+1. Use [GitHub Issues](https://github.com/tak-bro/ng-numeric-keyboard/issues) board to report bugs and feature requests (not our email address)
+2. Please **always** write steps to reproduce the error. That way we can focus on fixing the bug, not scratching our heads trying to reproduce it.
+
+Thanks for understanding!
+
+### License
+
+The MIT License (see the [LICENSE](https://github.com/tak-bro/ng-numeric-keyboard/blob/develop/LICENSE) file for the full text)

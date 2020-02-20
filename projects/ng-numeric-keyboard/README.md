@@ -1,24 +1,73 @@
-# NgNumericKeyboard
+# ng-numeric-keyboard
 
-This library was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.2.14.
+Number keyboard for mobile browsers For Angular
 
-## Code scaffolding
+> This project was forked in [numeric-keyboard](https://github.com/viclm/numeric-keyboard)
 
-Run `ng generate component component-name --project ng-numeric-keyboard` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module --project ng-numeric-keyboard`.
-> Note: Don't forget to add `--project ng-numeric-keyboard` or else it will be added to the default project in your `angular.json` file. 
+## Demo
 
-## Build
+- TBD
 
-Run `ng build ng-numeric-keyboard` to build the project. The build artifacts will be stored in the `dist/` directory.
+## Usage
 
-## Publishing
+### 1. Install
 
-After building your library with `ng build ng-numeric-keyboard`, go to the dist folder `cd dist/ng-numeric-keyboard` and run `npm publish`.
+```
+npm install ng-numeric-keyboard --save
+```
 
-## Running unit tests
+import `NgNumericKeyboardModule`。
 
-Run `ng test ng-numeric-keyboard` to execute the unit tests via [Karma](https://karma-runner.github.io).
+```typescript
+import { NgNumericKeyboardModule } from 'ng-numeric-keyboard';
 
-## Further help
+@NgModule({
+  imports: [ BrowserModule, NgNumericKeyboardModule ],
+  declarations: [AppComponent],
+  bootstrap: [AppComponent]
+})
+export class AppModule { }
+```
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+### 2. Template
+
+```html
+<ng-numeric-input [layout]="'number'"
+                  [entertext]="'Next'"
+                  [placeholder]="'This is placeholder'"
+                  [disabled]="false"
+                  [(ngModel)]="data"
+                  (enterpress)="onEnter()"
+                  (ngModelChange)="onChange()"
+                  (focus)="onInputFocus()"
+                  (blur)="onInputBlur()">
+</ng-numeric-input>
+
+```
+
+**Method**
+
+| Name              | Description                                                                                    |
+|-------------------|------------------------------------------------------------------------------------------------|
+| `enterpress()`    | TBD
+| `ngModelChange()` | TBD
+| `focus()`         | TBD
+| `blur()`          | TBD
+
+
+## API
+
+- TBD
+
+## Troubleshooting
+
+Please follow this guidelines when reporting bugs and feature requests:
+
+1. Use [GitHub Issues](https://github.com/tak-bro/ng-numeric-keyboard/issues) board to report bugs and feature requests (not our email address)
+2. Please **always** write steps to reproduce the error. That way we can focus on fixing the bug, not scratching our heads trying to reproduce it.
+
+Thanks for understanding!
+
+### License
+
+The MIT License (see the [LICENSE](https://github.com/tak-bro/ng-numeric-keyboard/blob/develop/LICENSE) file for the full text)

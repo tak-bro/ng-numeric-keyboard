@@ -1,6 +1,6 @@
 {
     "name": "ng-numeric-keyboard-app",
-    "version": "0.0.0",
+    "version": "0.0.1",
     "scripts": {
         "ng": "ng",
         "start": "ng serve",
@@ -16,7 +16,7 @@
         "package": "ng build ng-numeric-keyboard && npm run pack:ng-numeric-keyboard",
         "build:dev": "ng build --project=ng-numeric-keyboard --watch"
     },
-    "private": true,
+    "private": false,
     "dependencies": {
         "@angular/animations": "~8.2.14",
         "@angular/common": "~8.2.14",
