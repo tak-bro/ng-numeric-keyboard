@@ -2,8 +2,6 @@
 
 <p align="center">Number keyboard for mobile browsers For Angular</p>
 
-> This project was forked in [numeric-keyboard](https://github.com/viclm/numeric-keyboard)
-
 <p align="center">
   <a aria-label="build status" href="https://github.com/tak-bro/ng-numeric-keyboard/actions">
     <img alt="" src="https://github.com/tak-bro/ng-numeric-keyboard/workflows/build/badge.svg">
@@ -19,6 +17,7 @@
   </a>
 </p>
 
+> This project was forked in [numeric-keyboard](https://github.com/viclm/numeric-keyboard)
 
 ## Demo
 
