@@ -1,6 +1,8 @@
 {
     "name": "ng-numeric-keyboard-app",
     "version": "0.0.2",
+    "description": "Number keyboard for mobile browsers For Angular",
+    "author": "Hyungtak Jin",
     "scripts": {
         "ng": "ng",
         "start": "ng serve",
