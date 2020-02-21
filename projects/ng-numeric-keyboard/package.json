@@ -2,7 +2,7 @@
     "name": "ng-numeric-keyboard",
     "version": "0.0.2",
     "description": "Number keyboard for mobile browsers For Angular",
-    "author": "tak-bro",
+    "author": "Hyungtak Jin",
     "repository": {
         "type": "git",
         "url": "https://github.com/tak-bro/ng-numeric-keyboard.git"
