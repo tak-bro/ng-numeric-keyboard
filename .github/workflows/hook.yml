@@ -36,4 +36,4 @@ jobs:
           curl -X POST https://api.github.com/repos/tak-bro/github-actions-test-app/dispatches \
           -H 'Accept: application/vnd.github.everest-preview+json' \
           -u ${{ secrets.GITHUB_ACCESS_TOKEN }} \
-          --data '{"event_type": "hook", "payload": { "repository": "'"$GITHUB_REPOSITORY"'", "version": "'"$VERSION"'"}}'
+          --data '{"event_type": "hook", "client_payload": { "repository": "'"$GITHUB_REPOSITORY"'", "version": "'"$VERSION"'"}}'
