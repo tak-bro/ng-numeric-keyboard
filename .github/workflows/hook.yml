@@ -1,0 +1,39 @@
+name: hook
+on:
+  push:
+    branches:
+      - feature/hook
+
+jobs:
+  hook:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node-version: [12.x]
+
+    steps:
+      - uses: actions/checkout@v1
+      - uses: actions/setup-node@v1
+        with:
+          node-version: ${{ matrix.node-version }}
+          registry-url: https://registry.npmjs.org/
+      - name: Cache node modules
+        uses: actions/cache@v1
+        with:
+          path: ~/.npm
+          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
+          restore-keys: |
+            ${{ runner.os }}-node-
+      - name: Node ${{ matrix.node-version }}
+        uses: actions/setup-node@v1
+        with:
+          node-version: ${{ matrix.node-version }}
+      - name: npm ci and send hook
+        run: |
+          npm ci
+          npm run test:headless
+          VERSION=`cat package.json | jq -r .version`
+          curl -X POST https://api.github.com/repos/tak-bro/github-actions-test-app/dispatches \
+          -H 'Accept: application/vnd.github.everest-preview+json' \
+          -u ${{ secrets.GITHUB_ACCESS_TOKEN }} \
+          --data '{"event_type": "hook", "payload": { "repository": "'"$GITHUB_REPOSITORY"'", "version": "'"$VERSION"'"}}'
