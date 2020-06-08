@@ -1,0 +1,32 @@
+{
+    "name": "ng-numeric-keyboard",
+    "version": "1.0.1",
+    "description": "Number keyboard for mobile browsers For Angular",
+    "author": "Hyungtak Jin",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/tak-bro/ng-numeric-keyboard.git"
+    },
+    "bugs": {
+        "url": "https://github.com/tak-bro/ng-numeric-keyboard/issues"
+    },
+    "homepage": "https://github.com/tak-bro/ng-numeric-keyboard",
+    "keywords": [
+        "angular",
+        "angular6",
+        "angular7",
+        "angular8",
+        "angular9",
+        "keyboard",
+        "numeric",
+        "numeric-keyboard",
+        "mobile",
+        "mobile keyboard",
+        "number keyboard"
+    ],
+    "license": "MIT",
+    "peerDependencies": {
+        "@angular/common": "^8.2.14",
+        "@angular/core": "^8.2.14"
+    }
+}

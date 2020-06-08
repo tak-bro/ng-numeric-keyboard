@@ -1,0 +1,92 @@
+/* prefixed by https://autoprefixer.github.io (PostCSS: v7.0.26, autoprefixer: v9.7.3) */
+
+.numeric-input-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    text-align: left;
+
+    .numeric-input {
+        display: block;
+        background: transparent;
+        width: 100%;
+        height: 100%;
+        padding: 0;
+        text-align: inherit;
+
+        &.readonly,
+        &.disabled {
+            opacity: 0.5;
+            pointer-events: none;
+        }
+
+        > div {
+            position: relative;
+            overflow: hidden;
+            height: 100%;
+        }
+    }
+
+    .numeric-input-placeholder {
+        color: #757575;
+    }
+
+    .numeric-input-text {
+        width: 10000%;
+
+        .input-text {
+            letter-spacing: -1.8px;
+        }
+    }
+
+    .numeric-input-cursor {
+        pointer-events: none;
+        position: absolute;
+        left: 1px;
+        top: 1px;
+        width: 1px;
+        height: 90%;
+        -webkit-animation: numeric-input-cursor 1s steps(1) infinite;
+        animation: numeric-input-cursor 1s steps(1) infinite;
+    }
+
+    .numeric-keyboard-actionsheet {
+        position: fixed;
+        bottom: 0px;
+        left: 0px;
+        width: 100%;
+        height: 40%;
+
+        > div {
+
+            &:first-child {
+                height: 100%;
+            }
+
+            &:last-child {
+                position: absolute;
+                top: 0;
+                right: 0;
+                bottom: 0;
+                left: 0;
+                -webkit-transform: translateY(100%);
+                -ms-transform: translateY(100%);
+                transform: translateY(100%);
+                -webkit-box-shadow: 0 -2px 4px 0 #cfd4da;
+                box-shadow: 0 -2px 4px 0 #cfd4da;
+            }
+        }
+    }
+
+    @-webkit-keyframes numeric-input-cursor {
+        50% {
+            background-color: transparent;
+        }
+    }
+
+    @keyframes numeric-input-cursor {
+        50% {
+            background-color: transparent;
+        }
+    }
+}

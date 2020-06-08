@@ -1,0 +1,89 @@
+/* prefixed by https://autoprefixer.github.io (PostCSS: v7.0.26, autoprefixer: v9.7.3) */
+.del-icon {
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    background-image: url('./assets/delete.svg');
+    width: 100%;
+    height: 100%;
+    margin-left: -1px;
+}
+
+.half {
+    height: 50%;
+}
+
+.down-icon {
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    background-image: url('./assets/keyboard-hide.svg');
+    width: 70%;
+    height: 70%;
+    margin: auto;
+}
+
+.numeric-keyboard {
+    width: 100%;
+    height: 100%;
+    background: #E0E0E0;
+    table-layout: fixed;
+    border-collapse: separate;
+    border-spacing: 7px;
+    font-size: 2em;
+    text-align: center;
+}
+
+.numeric-keyboard-key {
+    -ms-touch-action: manipulation;
+    touch-action: manipulation;
+    -webkit-transition: background 0.3s;
+    -o-transition: background 0.3s;
+    transition: background 0.3s;
+    color: #3B3B3B;
+    background: #FAFAFA;
+    padding: 5px 0 5px 0;
+    border-radius: 5px;
+
+    &:active {
+        background: #E1E1E1;
+    }
+}
+
+.numeric-keyboard-key[data-key=""] {
+    pointer-events: none;
+    background: #EDEEF1;
+}
+
+.numeric-keyboard-key[data-key=esc] {
+    background: #EDEEF1;
+}
+
+.numeric-keyboard-key[data-key=enter] {
+    color: #5695E8;
+    background: #EDEDED;
+    font-size: 20px;
+    letter-spacing: -0.5px !important;
+}
+
+.numeric-keyboard-key[data-key=del],
+.numeric-keyboard-key[data-key="."] {
+    background: #EDEDED;
+    color: #4C4C4C;
+}
+
+.numeric-keyboard-key[data-key=enter]:active,
+.numeric-keyboard-key[data-key=del]:active,
+.numeric-keyboard-key[data-key="."]:active {
+    background: #D5D5D5;
+}
+
+.numeric-keyboard-key[data-icon]::before {
+    content: attr(data-icon);
+}
+
+.numeric-keyboard-key[data-icon=esc]::before,
+.numeric-keyboard-key[data-icon=del]::before {
+    display: block;
+    content: ' ';
+}

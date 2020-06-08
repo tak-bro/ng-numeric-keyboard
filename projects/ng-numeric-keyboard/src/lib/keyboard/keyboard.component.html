@@ -1,0 +1,15 @@
+<table class="numeric-keyboard">
+    <tr *ngFor="let r of ks.resolvedLayout">
+        <td *ngFor="let c of r"
+            [attr.rowspan]="c.rowspan"
+            [attr.colspan]="c.colspan"
+            [attr.data-key]="c.key"
+            [attr.data-icon]="c.key === ENTER ? kp.entertext : c.key"
+            class="numeric-keyboard-key"
+            (touchend)="onTouchend(c.key)"
+        >
+            <div *ngIf="c.key === DEL" class="del-icon" [ngClass]="c.rowspan === 2 ? 'half' : ''">&nbsp;</div>
+            <div *ngIf="c.key === ESC" class="down-icon">&nbsp;</div>
+        </td>
+    </tr>
+</table>
