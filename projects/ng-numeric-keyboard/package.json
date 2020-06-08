@@ -1,6 +1,6 @@
 {
     "name": "ng-numeric-keyboard",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "description": "Number keyboard for mobile browsers For Angular",
     "author": "Hyungtak Jin",
     "repository": {
@@ -13,9 +13,10 @@
     "homepage": "https://github.com/tak-bro/ng-numeric-keyboard",
     "keywords": [
         "angular",
-        "angular 6",
-        "angular 7",
-        "angular 8",
+        "angular6",
+        "angular7",
+        "angular8",
+        "angular9",
         "keyboard",
         "numeric",
         "numeric-keyboard",
