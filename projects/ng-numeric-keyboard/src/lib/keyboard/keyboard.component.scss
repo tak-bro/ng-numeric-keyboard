@@ -1,12 +1,4 @@
 /* prefixed by https://autoprefixer.github.io (PostCSS: v7.0.26, autoprefixer: v9.7.3) */
-
-@font-face {
-    font-family: numeric-keyboard;
-    src: url('./assets/SpoqaHanSansRegular.woff') format("woff");
-    font-weight: normal;
-    font-style: normal;
-}
-
 .del-icon {
     background-repeat: no-repeat;
     background-size: contain;
@@ -87,7 +79,6 @@
 }
 
 .numeric-keyboard-key[data-icon]::before {
-    font-family: numeric-keyboard !important;
     content: attr(data-icon);
 }
 

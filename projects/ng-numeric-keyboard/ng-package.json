@@ -2,7 +2,7 @@
     "$schema": "../../node_modules/ng-packagr/ng-package.schema.json",
     "dest": "../../dist/ng-numeric-keyboard",
     "lib": {
-        "entryFile": "src/ng-numeric-keyboard.module.ts",
+        "entryFile": "src/public-api.ts",
         "cssUrl": "inline"
     }
 }

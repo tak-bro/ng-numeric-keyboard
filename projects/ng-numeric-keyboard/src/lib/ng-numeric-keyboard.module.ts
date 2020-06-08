@@ -1,7 +1,5 @@
 import { NgModule } from '@angular/core';
-
-import { NumericInputModule } from './lib/numeric-input.module';
-export * from './lib/public-api';
+import { NumericInputModule } from './numeric-input.module';
 
 @NgModule({
     exports: [
